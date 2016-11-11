@@ -33,13 +33,14 @@ func main() {
 		// the same name here. We would normally use a UUID but opted
 		// for this so as to be more human friendly. If the program
 		// is restarted, this is how it knows where to pick up from.
-		UniqueName: "freq_" + strings.Replace(path, "/", "_", -1),
+		UniqueName: "freq_aminy" + strings.Replace(path, "/", "_", -1),
 		// These are inputs to the distillate that will be loaded
 		// and presented to Process()
-		InputPaths: []string{path + "/L1ANG"},
+		InputPaths: []string{path + "/L2ANG"},
 		// These are the output paths for the distillate. They must
 		// also be strictly unique.
-		OutputPaths: []string{path + "/freq_1s", path + "/freq_c37"},
+		OutputPaths: []string{"/distillates" + path + "/freq_1s",
+					"/distillates" + path + "/freq_c37"},
 	})
 
 	ds.StartEngine()

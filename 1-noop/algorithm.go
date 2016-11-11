@@ -21,6 +21,8 @@ func (d *NopDistiller) Process(in *distil.InputSet, out *distil.OutputSet) {
 	// our simple NOOP distillate simply maintains an exact copy of the
 	// target stream
 	for index := 0; index < in.NumSamples(0); index++ {
-		out.AddPoint(0, in.Get(0, index))
+		point := in.Get(0,index)
+		point.V *=2
+		out.AddPoint(0, point)
 	}
 }

@@ -38,13 +38,13 @@ func main() {
 		// the same name here. We would normally use a UUID but opted
 		// for this so as to be more human friendly. If the program
 		// is restarted, this is how it knows where to pick up from.
-		UniqueName: "demo_noop_distillate",
+		UniqueName: "aminy_multiplier_distillate_0",
 		// These are inputs to the distillate that will be loaded
 		// and presented to Process()
-		InputPaths: []string{"/LBNL/a6_bus1/L1MAG"},
+		InputPaths: []string{"/REFSET/LBNL/a6_bus1/L2MAG"},
 		// These are the output paths for the distillate. They must
 		// also be strictly unique.
-		OutputPaths: []string{"/LBNL/a6_bus1/L1MAG"},
+		OutputPaths: []string{"/aostfeld/a6_bus1/multiplied"},
 	})
 
 	//Now we tell the DISTIL library to keep all the registered distillates
